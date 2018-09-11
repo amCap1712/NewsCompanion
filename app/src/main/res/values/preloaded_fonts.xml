@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/exo_semibold</item>
+        <item>@font/nunito_sans</item>
+        <item>@font/share_tech</item>
+    </array>
+</resources>

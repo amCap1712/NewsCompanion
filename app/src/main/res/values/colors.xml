@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="space_background">#2b2b2b</color>
+    <color name="space_text">#bebebe</color>
+
+    <color name="space_normal">#424242</color>
+    <color name="tech_normal">#263238</color>
+    <color name="business_normal">#6200ea</color>
+    <color name="environment_normal">#33691e</color>
+    <color name="physics_normal">#ff6d00</color>
+
+    <color name="space_dark">#1b1b1b</color>
+    <color name="tech_dark">#000a12</color>
+    <color name="business_dark">#0a00b6</color>
+    <color name="environment_dark">#003d00</color>
+    <color name="physics_dark">#c43c00</color>
+
+    <color name="space_light">#6d6d6d</color>
+    <color name="tech_light">#4f5b62</color>
+    <color name="business_light">#9d46ff</color>
+    <color name="environment_light">#629749</color>
+    <color name="physics_light">#ff9e40</color>
+
+</resources>

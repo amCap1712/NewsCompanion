@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preference_language_values_list">
+        <item>@string/preference_order_by_newest</item>
+        <item>@string/preference_order_by_oldest</item>
+        <item>@string/preference_order_by_relevance</item>
+    </string-array>
+
+    <string-array name="preference_language_labels_list">
+        <item>@string/preference_order_by_newest_label</item>
+        <item>@string/preference_order_by_oldest_label</item>
+        <item>@string/preference_order_by_relevance_label</item>
+    </string-array>
+</resources>

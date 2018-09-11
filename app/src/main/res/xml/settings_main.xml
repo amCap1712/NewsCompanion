@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/action_settings">
+
+    <EditTextPreference
+        android:defaultValue="@string/preference_articles_number_default"
+        android:key="@string/preference_articles_number_key"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/preference_articles_number"
+        android:inputType="number" />
+    <ListPreference
+        android:defaultValue="@string/preference_order_by_newest"
+        android:entries="@array/preference_language_labels_list"
+        android:entryValues="@array/preference_language_values_list"
+        android:key="@string/preference_order_by_key"
+        android:title="@string/preference_order_by_key_label" />
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">News Companion</string>
+    <string name="category_space">Space</string>
+    <string name="title_activity_news_article">NewsArticle</string>
+    <string name="article_image">Main Image of Article</string>
+    <string name="read_on_guardian">Read on The Guardian</string>
+    <string name="loading_image">Loading Image Progress</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="preference_articles_number">Number of Articles</string>
+    <string name="preference_articles_number_key">page-size</string>
+    <string name="preference_articles_number_default">10</string>
+
+    <string name="preference_order_by_key">order-by</string>
+    <string name="preference_order_by_newest">newest</string>
+    <string name="preference_order_by_oldest">oldest</string>
+    <string name="preference_order_by_relevance">relevance</string>
+
+    <string name="preference_order_by_key_label">Order BY</string>
+    <string name="preference_order_by_newest_label">Newest</string>
+    <string name="preference_order_by_oldest_label">Oldest</string>
+    <string name="preference_order_by_relevance_label">Relevance</string>
+
+    <string name="no_internet_connection">We detected that you are currently not connected to the internet.
+    Please re-connect to view latest news articles.</string>
+    <string name="space_description">Ever fantasized by the enormous universe around us or wanted to
+        venture out deep inside it? We shall try to satisfy your curiosity with the latest discoveries
+        and news about the Space.</string>
+    <string name="tech_description">The world of technology is too deep to dive in. You may easily
+        sink down. We will keep you afloat and updated with the world of tech.</string>
+    <string name="physics_description">Physics is the natural science that studies matter and its behavior
+        through space and time. Keep yourself updated with discoveries about all aspects of nature
+        on both the macroscopic and submicroscopic levels.</string>
+    <string name="environment_description">The alarm has rung. Its now or never. We need to act immediately
+        to protect our environment. Keep yourself updated about the latest developments about the effects
+        of human actions on environment and raise your voice.</string>
+    <string name="business_description">In this shrewd world of business, you cannot afford to be outdated.
+    Keep up to the latest industry standards, policies and much more with us.</string>
+    <string name="empty_data">Everything isn\'t right. Either there is some problem on our or your end.
+        If that is not the case, something even worse has happened. <b>We may have run out of articles.</b>
+    But that should not be the case, how about refreshing the app or wait some time. Anyways, if your patience give up you
+    can always contact us. We will be more than happy to help.</string>
+</resources>

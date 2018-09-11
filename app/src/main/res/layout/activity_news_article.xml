@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/AppTheme"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="64dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        tools:context=".NewsArticleActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideInset">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/article_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Astronomers find source of stars' mysterious microwaves" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/article_author"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textColor="@color/space_background"
+                        tools:text="Stuart Clarke" />
+
+                    <TextView
+                        android:id="@+id/article_date"
+                        android:layout_width="0dp"
+                        android:maxLines="1"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="end"
+                        android:textColor="@color/space_background"
+                        tools:text="15 Jun,2018" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/article_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="480dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/round_corners"
+                    android:contentDescription="@string/article_image"
+                    tools:src="@drawable/space_bg" />
+
+                <TextView
+                    android:id="@+id/article_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textAlignment="textStart"
+                    android:lineSpacingExtra="3dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

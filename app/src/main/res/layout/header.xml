@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="200dp"
+    android:layout_margin="12dp"
+    android:background="@color/space_text"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/news_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fillViewport="false"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay">
+
+            <TextView
+                android:id="@+id/section_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo_semibold"
+                android:textColor="@color/space_background"
+                android:textSize="14sp"
+                tools:text="@string/physics_description" />
+        </ScrollView>
+
+
+        <ImageView
+            android:id="@+id/section_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:minHeight="168dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/round_corners"
+            android:contentDescription="@string/category_space"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/physics_bg" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
