@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -39,6 +40,7 @@ public abstract class FragmentTemplate extends Fragment implements LoaderManager
     private String baseUrl = "https://content.guardianapis.com/search?";
     private NewsAdapter adapter;
     private RecyclerView recyclerView;
+    private SwipeRefreshLayout refreshLayout;
     private ProgressBar progressBar;
     private TextView emptyView;
     protected Uri queryUri;
@@ -99,6 +101,14 @@ public abstract class FragmentTemplate extends Fragment implements LoaderManager
         progressBar.setProgressDrawable(progressBarDrawable);
         progressBar.setIndeterminate(true);
         progressBar.setVisibility(View.VISIBLE);
+
+        refreshLayout = view.findViewById(R.id.swipe_for_refresh);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshArticles();
+            }
+        });
         return view;
     }
 
@@ -129,6 +139,7 @@ public abstract class FragmentTemplate extends Fragment implements LoaderManager
     @Override
     public void onLoadFinished(@NonNull android.support.v4.content.Loader<List<Article>> loader, List<Article> data) {
         progressBar.setVisibility(View.GONE);
+        refreshLayout.setRefreshing(false);
         if(data == null){
             emptyView.setVisibility(View.VISIBLE);
         }else {
@@ -144,6 +155,9 @@ public abstract class FragmentTemplate extends Fragment implements LoaderManager
     public void onLoaderReset(@NonNull android.support.v4.content.Loader<List<Article>> loader) {
     }
 
+    public void refreshArticles(){
+        getLoaderManager().restartLoader(ID,null,this);
+    }
     public abstract void addQueryTag();
     public abstract void setHeaderData();
 }

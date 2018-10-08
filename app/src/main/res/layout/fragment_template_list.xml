@@ -12,15 +12,22 @@
         android:layout_height="240dp"
         android:layout_width="match_parent"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
-        android:name="com.cc.newscompanion.SpaceFragment"
-        android:layout_width="match_parent"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_for_refresh"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        tools:context=".fragments.FragmentTemplate"
-        tools:listitem="@layout/fragment_template" />
+        android:layout_width="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:name="com.cc.newscompanion.SpaceFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:context=".fragments.FragmentTemplate"
+            tools:listitem="@layout/fragment_template" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <ProgressBar
         android:id="@+id/progress_bar"
