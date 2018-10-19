@@ -2,18 +2,34 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/action_settings">
 
-    <EditTextPreference
-        android:defaultValue="@string/preference_articles_number_default"
-        android:key="@string/preference_articles_number_key"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:title="@string/preference_articles_number"
-        android:inputType="number" />
-    <ListPreference
-        android:defaultValue="@string/preference_order_by_newest"
-        android:entries="@array/preference_language_labels_list"
-        android:entryValues="@array/preference_language_values_list"
-        android:key="@string/preference_order_by_key"
-        android:title="@string/preference_order_by_key_label" />
+    <PreferenceCategory android:title="@string/preference_category_general">
+        <EditTextPreference
+            android:defaultValue="@string/preference_articles_number_default"
+            android:key="@string/preference_articles_number_key"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_articles_number"
+            android:inputType="number" />
+        <ListPreference
+            android:defaultValue="@string/preference_order_by_newest"
+            android:entries="@array/preference_language_labels_list"
+            android:entryValues="@array/preference_language_values_list"
+            android:key="@string/preference_order_by_key"
+            android:title="@string/preference_order_by_key_label" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preference_category_search">
+        <EditTextPreference
+            android:defaultValue="@string/preference_search_articles_number_default"
+            android:key="@string/preference_search_articles_number_key"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_search_articles_number"
+            android:inputType="number" />
+        <CheckBoxPreference android:defaultValue="@string/preference_search_categories"
+            android:key="@string/preference_search_categories_key"
+            android:title="@string/preference_search_categories_title"
+            android:summary="@string/preference_search_categories_summary"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

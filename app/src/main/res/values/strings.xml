@@ -10,6 +10,9 @@
     <string name="action_search">Search</string>
     <string name="search_hint">Search News</string>
 
+    <string name="preference_category_general">General</string>
+    <string name="preference_category_search">Search</string>
+
     <string name="preference_articles_number">Number of Articles</string>
     <string name="preference_articles_number_key">page-size</string>
     <string name="preference_articles_number_default">10</string>
@@ -19,10 +22,20 @@
     <string name="preference_order_by_oldest">oldest</string>
     <string name="preference_order_by_relevance">relevance</string>
 
-    <string name="preference_order_by_key_label">Order BY</string>
+    <string name="preference_order_by_key_label">Order By</string>
     <string name="preference_order_by_newest_label">Newest</string>
     <string name="preference_order_by_oldest_label">Oldest</string>
     <string name="preference_order_by_relevance_label">Relevance</string>
+
+    <string name="preference_search_articles_number">Number of Articles</string>
+    <string name="preference_search_articles_number_key">search-page-size</string>
+    <string name="preference_search_articles_number_default">10</string>
+
+    <string name="preference_search_categories">true</string>
+    <string name="preference_search_categories_key">tag</string>
+    <string name="preference_search_categories_title">Search All Categories</string>
+    <string name="preference_search_categories_summary">Uncheck this, if you do not want to search articles
+    outside the categories available in the app.</string>
 
     <string name="no_internet_connection">We detected that you are currently not connected to the internet.
     Please re-connect to view latest news articles.</string>

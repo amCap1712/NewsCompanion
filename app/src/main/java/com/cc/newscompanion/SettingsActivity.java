@@ -2,6 +2,7 @@ package com.cc.newscompanion;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -38,8 +39,11 @@ public class SettingsActivity extends AppCompatActivity {
             addPreferencesFromResource(R.xml.settings_main);
             Preference numberOfArticles = findPreference(getString(R.string.preference_articles_number_key));
             bindPreferenceSummaryToValue(numberOfArticles);
+            Preference numberSearchResults = findPreference(getString(R.string.preference_search_articles_number_key));
+            bindPreferenceSummaryToValue(numberSearchResults);
             Preference orderBy = findPreference(getString(R.string.preference_order_by_key));
             bindPreferenceSummaryToValue(orderBy);
+            Preference searchCategory = findPreference(getString(R.string.preference_search_categories_key));
         }
 
         @Override
@@ -52,7 +56,7 @@ public class SettingsActivity extends AppCompatActivity {
                     CharSequence[] labels = listPreference.getEntries();
                     preference.setSummary(labels[preferenceIndex]);
                 }
-            } else
+            } else if(!(preference instanceof CheckBoxPreference))
                 preference.setSummary(value);
             return true;
         }

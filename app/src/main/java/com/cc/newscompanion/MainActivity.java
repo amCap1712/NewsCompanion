@@ -24,7 +24,8 @@ import com.cc.newscompanion.fragments.PhysicsFragment;
 import com.cc.newscompanion.fragments.SpaceFragment;
 import com.cc.newscompanion.fragments.TechFragment;
 
-public class MainActivity extends AppCompatActivity implements OnListFragmentInteractionListener, TabLayout.OnTabSelectedListener{
+public class MainActivity extends AppCompatActivity implements OnListFragmentInteractionListener,
+        TabLayout.OnTabSelectedListener{
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private TabLayout tabLayout;
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements OnListFragmentInt
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         FragmentTemplate fragment = (FragmentTemplate) viewPagerAdapter.getItem(tabLayout.getSelectedTabPosition());
-       // tabLayout.setSelectedTabIndicatorColor();
         tabLayout.setBackgroundColor(ContextCompat.getColor(this,fragment.tabColor));
         getWindow().setStatusBarColor(ContextCompat.getColor(this,fragment.statusBarColor));
         toolbar.setBackgroundColor(ContextCompat.getColor(this,fragment.tabColor));

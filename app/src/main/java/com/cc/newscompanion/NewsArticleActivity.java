@@ -87,7 +87,7 @@ public class NewsArticleActivity extends AppCompatActivity {
     }
 
     private int chooseStatusBarColor(int id){
-        int color = R.color.colorPrimaryDark;
+        int color = R.color.dark_black;
         switch (id){
             case 0: color = R.color.space_dark;
                 break;
@@ -104,7 +104,7 @@ public class NewsArticleActivity extends AppCompatActivity {
     }
 
     private int chooseTextBackgroundColor(int id){
-        int color = R.color.colorAccent;
+        int color = R.color.light_black;
         switch (id){
             case 0: color = R.color.space_light;
                 break;

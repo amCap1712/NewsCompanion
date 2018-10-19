@@ -2,7 +2,9 @@ package com.cc.newscompanion;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.ContextCompat;
@@ -28,6 +30,8 @@ public class SearchActivity extends AppCompatActivity implements OnListFragmentI
         LoaderManager.LoaderCallbacks<List<Article>> {
 
     private static final String baseUrl = "https://content.guardianapis.com/search?";
+    public static final String ALL_TAGS = "technology/technology|science/space|" +
+            "science/physics|environment/environment|business/business";
     private ArrayList<Article> articles;
     private NewsAdapter adapter;
     private static int ID = 1712;
@@ -79,6 +83,7 @@ public class SearchActivity extends AppCompatActivity implements OnListFragmentI
         });
 
         emptyView = findViewById(R.id.empty_view);
+        emptyView.setVisibility(View.INVISIBLE);
     }
 
     public void refreshArticles(){
@@ -127,6 +132,18 @@ public class SearchActivity extends AppCompatActivity implements OnListFragmentI
     public void doSearch(String query){
         queryUri = QueryUtils.createBaseUri(baseUrl);
         queryUri = QueryUtils.addSearchQueryParameters(queryUri,query);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String numberOfArticles = preferences.getString(
+                getString(R.string.preference_search_articles_number_key),
+                getString(R.string.preference_search_articles_number_default));
+        boolean searchAllCategories = preferences.getBoolean(
+                getString(R.string.preference_search_categories_key),true);
+        if(!searchAllCategories)
+            queryUri = QueryUtils.addOptionalQueryParameter(queryUri,"tag",ALL_TAGS);
+        queryUri = QueryUtils.addOptionalQueryParameter(queryUri,
+                getString(R.string.preference_articles_number_key),
+                numberOfArticles);
+
         getSupportLoaderManager().initLoader(ID,null,this);
     }
 }

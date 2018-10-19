@@ -54,7 +54,7 @@
             android:name=".SettingsActivity"
             android:label="@string/action_settings"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppThemeActionBar">
+            android:theme="@style/AppSettingsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cc.newscompanion.MainActivity" />

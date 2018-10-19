@@ -12,6 +12,13 @@
         android:layout_height="240dp"
         android:layout_width="match_parent"/>
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_for_refresh"
         android:layout_height="wrap_content"
@@ -28,13 +35,6 @@
             tools:listitem="@layout/fragment_template" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
 
     <ScrollView
         android:layout_width="match_parent"
