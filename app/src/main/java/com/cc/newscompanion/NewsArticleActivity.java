@@ -70,7 +70,7 @@ public class NewsArticleActivity extends AppCompatActivity {
     }
 
     private int chooseBackgroundColor(int id){
-        int color = R.color.colorPrimary;
+        int color = R.color.dark_black;
         switch (id){
             case 0: color = R.color.space_normal;
                 break;
@@ -129,5 +129,11 @@ public class NewsArticleActivity extends AppCompatActivity {
             case 4: return "Business";
         }
         return "News Companion";
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

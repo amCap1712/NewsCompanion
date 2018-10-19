@@ -43,6 +43,15 @@ public class QueryUtils {
         return builder.build();
     }
 
+    public static Uri addSearchQueryParameters(Uri baseUri,String query){
+        Uri.Builder builder = baseUri.buildUpon();
+        builder.appendQueryParameter("q",query);
+        builder.appendQueryParameter("show-fields","thumbnail,bodyText,headline,byline");
+        builder.appendQueryParameter("api-key","dabc1fac-a56b-49cb-bd5d-0670072cf40c");
+        builder.appendQueryParameter("pages","1");
+        return builder.build();
+    }
+
     public static ArrayList<Article> extractArticlesFromJSON(String jsonResponse){
         ArrayList<Article> articles = new ArrayList<>();
         if(jsonResponse == null || jsonResponse.length() == 0)
